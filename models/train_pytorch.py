@@ -31,15 +31,22 @@ LOGS_DIR.mkdir(exist_ok=True)
 # Training parameters
 MODEL_TYPE = 'custom'  # 'custom' or 'resnet'
 IMG_SIZE = 224
-BATCH_SIZE = 32
+BATCH_SIZE = 64  # Increased for RTX 4050 (6GB VRAM) - use 32 if out of memory
 EPOCHS = 50
 LEARNING_RATE = 0.001
+NUM_WORKERS = 4  # Faster data loading
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 print("\n" + "="*80)
 print("PYTORCH CNN TRAINING PIPELINE")
 print("="*80 + "\n")
 print(f"🖥️  Device: {DEVICE}")
+if torch.cuda.is_available():
+    print(f"🎮 GPU: {torch.cuda.get_device_name(0)}")
+    print(f"💾 GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+    print(f"⚡ Training will be 5-10x faster than CPU!")
+else:
+    print(f"⚠️  GPU not detected - training will be slower")
 
 # Load dataset stats
 with open(DATASET_DIR / 'dataset_stats.json', 'r') as f:
@@ -113,9 +120,9 @@ test_dataset = CandlestickDataset(
 )
 
 # Create dataloaders
-train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
-val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
-test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
+train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS, pin_memory=True if torch.cuda.is_available() else False)
+val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True if torch.cuda.is_available() else False)
+test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=True if torch.cuda.is_available() else False)
 
 print(f"✅ Datasets created:")
 print(f"  - Train batches: {len(train_loader)}")
