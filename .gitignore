@@ -1,0 +1,93 @@
+# Large Data Files - DO NOT PUSH
+Binance Full History 28gb/
+*.parquet
+*.csv
+
+# Generated Images - DO NOT PUSH
+Candlestick_Images/
+Candlestick_Images_Major/
+Candlestick_Images_Balanced/
+output_images/
+*.png
+*.jpg
+*.jpeg
+
+# Archive folder - old files
+archive/
+
+# Model Checkpoints
+*.h5
+*.pth
+*.ckpt
+*.weights
+saved_models/
+checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+*.out
+
+# Checkpoints & Stats
+checkpoint.json
+processing_stats.json
+*_stats.json
+
+# Temporary files
+*.tmp
+*.bak
+temp/
+tmp/
+
+# Documentation build
+docs/_build/
+site/
