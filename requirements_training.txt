@@ -1,0 +1,26 @@
+# CNN Training Requirements
+# Install with: pip install -r requirements_training.txt
+
+# Core ML framework
+tensorflow>=2.13.0
+
+# Image processing and data
+pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Scientific computing
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# TensorBoard for monitoring
+tensorboard>=2.13.0
+
+# Optional: For better performance
+# tensorflow-gpu>=2.13.0  # If you have NVIDIA GPU
