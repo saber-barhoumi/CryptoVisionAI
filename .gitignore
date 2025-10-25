@@ -91,3 +91,12 @@ tmp/
 # Documentation build
 docs/_build/
 site/
+
+# Local automation scripts — keep local copies, do not push
+quick-save.ps1
+push_to_github.ps1
+auto-commit.ps1
+auto_commits_advanced.ps1
+daily-commit.ps1
+smart-commit.ps1
+push.ps1
