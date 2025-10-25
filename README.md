@@ -1,4 +1,4 @@
-# 🚀 CryptoVisionAI
+﻿# ðŸš€ CryptoVisionAI
 
 **AI-Powered Cryptocurrency Trading Using Computer Vision**
 
@@ -11,26 +11,26 @@ Transform candlestick charts into profitable trading signals using Convolutional
 
 ---
 
-## 🎯 Project Overview
+## ðŸŽ¯ Project Overview
 
 This project converts **Binance trading data** from Kaggle into **candlestick chart images** and trains a **CNN model** to predict:
-- 📈 **BUY** signals (bullish patterns)
-- 📉 **SELL** signals (bearish patterns) 
-- ⏸️ **HOLD** signals (neutral patterns)
+- ðŸ“ˆ **BUY** signals (bullish patterns)
+- ðŸ“‰ **SELL** signals (bearish patterns) 
+- â¸ï¸ **HOLD** signals (neutral patterns)
 
-### 🔥 Key Features
+### ðŸ”¥ Key Features
 
-- ✅ **1.5 Billion Trading Candles** analyzed
-- ✅ **260,000+ Candlestick Images** generated
-- ✅ **Balanced Dataset** (26.5% Buy, 26.9% Sell, 46.6% Hold)
-- ✅ **517 USDT & BTC Pairs** processed
-- ✅ **0.15% Threshold** for optimal signal detection
-- ✅ **30-Candle Window** for pattern recognition
-- ✅ **5-Bar Future Prediction** for trading decisions
+- âœ… **1.5 Billion Trading Candles** analyzed
+- âœ… **260,000+ Candlestick Images** generated
+- âœ… **Balanced Dataset** (26.5% Buy, 26.9% Sell, 46.6% Hold)
+- âœ… **517 USDT & BTC Pairs** processed
+- âœ… **0.15% Threshold** for optimal signal detection
+- âœ… **30-Candle Window** for pattern recognition
+- âœ… **5-Bar Future Prediction** for trading decisions
 
 ---
 
-## 📊 Dataset
+## ðŸ“Š Dataset
 
 ### Raw Data Source
 **Kaggle Dataset**: [Binance Full History](https://www.kaggle.com/datasets/jorijnsmit/binance-full-history)
@@ -53,22 +53,22 @@ This project converts **Binance trading data** from Kaggle into **candlestick ch
 | **Pairs Processed** | 517 (USDT + BTC) |
 | **Training Split** | 70% / 15% / 15% |
 
-### 📈 Label Distribution (Balanced)
+### ðŸ“ˆ Label Distribution (Balanced)
 
 ```
-Buy:  26.5% (67,533 images)  ✅ Optimal
-Sell: 26.9% (68,328 images)  ✅ Optimal
-Hold: 46.6% (118,563 images) ✅ Controlled
+Buy:  26.5% (67,533 images)  âœ… Optimal
+Sell: 26.9% (68,328 images)  âœ… Optimal
+Hold: 46.6% (118,563 images) âœ… Controlled
 ```
 
 **Improvement over naive threshold:**
-- Old (0.3%): 16% Buy / 17% Sell / 67% Hold ❌
-- New (0.15%): 27% Buy / 27% Sell / 47% Hold ✅
+- Old (0.3%): 16% Buy / 17% Sell / 67% Hold âŒ
+- New (0.15%): 27% Buy / 27% Sell / 47% Hold âœ…
 - **+60% more tradeable signals!**
 
 ---
 
-## 🛠️ Installation
+## ðŸ› ï¸ Installation
 
 ### Prerequisites
 
@@ -93,9 +93,9 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Quick Start
+## ðŸš€ Quick Start
 
-### 1️⃣ **Download Binance Data**
+### 1ï¸âƒ£ **Download Binance Data**
 
 Download from Kaggle: [Binance Full History](https://www.kaggle.com/datasets/jorijnsmit/binance-full-history)
 
@@ -116,7 +116,7 @@ unzip binance-full-history.zip -d "Binance Full History 28gb"
 2. Click "Download" (requires Kaggle account)
 3. Extract to `Binance Full History 28gb/` folder
 
-### 2️⃣ **Generate Candlestick Images**
+### 2ï¸âƒ£ **Generate Candlestick Images**
 
 ```bash
 python data_preparation/reprocess_balanced.py
@@ -128,13 +128,13 @@ This will:
 - Apply 0.15% threshold for balanced labels
 - Save to `Candlestick_Images_Balanced/`
 
-### 3️⃣ **Train CNN Model**
+### 3ï¸âƒ£ **Train CNN Model**
 
 ```bash
 python models/train.py
 ```
 
-### 4️⃣ **Evaluate & Backtest**
+### 4ï¸âƒ£ **Evaluate & Backtest**
 
 ```bash
 python models/evaluate.py
@@ -142,42 +142,42 @@ python models/evaluate.py
 
 ---
 
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```
 CryptoVisionAI/
-│
-├── data_preparation/          # Data processing scripts
-│   ├── explore_data.py        # Analyze Binance data
-│   ├── calculate_stats.py     # Dataset statistics
-│   └── reprocess_balanced.py  # Generate balanced images
-│
-├── models/                    # CNN models
-│   ├── cnn_model.py           # Model architecture
-│   ├── train.py               # Training pipeline
-│   └── evaluate.py            # Evaluation & backtesting
-│
-├── utils/                     # Utility functions
-│   ├── chart_generator.py     # Chart creation
-│   └── label_calculator.py    # Label generation
-│
-├── scripts/                   # Helper scripts
-│   ├── check_balance.ps1      # Dataset balance checker
-│   └── view_images.py         # Visualize samples
-│
-├── docs/                      # Documentation
-│   ├── QUICKSTART.md          # Setup guide
-│   └── DATA_ANALYSIS_RESULTS.md  # Analysis results
-│
-├── config.py                  # Configuration
-├── requirements.txt           # Dependencies
-├── .gitignore                 # Ignore large files
-└── README.md                  # This file
+â”‚
+â”œâ”€â”€ data_preparation/          # Data processing scripts
+â”‚   â”œâ”€â”€ explore_data.py        # Analyze Binance data
+â”‚   â”œâ”€â”€ calculate_stats.py     # Dataset statistics
+â”‚   â””â”€â”€ reprocess_balanced.py  # Generate balanced images
+â”‚
+â”œâ”€â”€ models/                    # CNN models
+â”‚   â”œâ”€â”€ cnn_model.py           # Model architecture
+â”‚   â”œâ”€â”€ train.py               # Training pipeline
+â”‚   â””â”€â”€ evaluate.py            # Evaluation & backtesting
+â”‚
+â”œâ”€â”€ utils/                     # Utility functions
+â”‚   â”œâ”€â”€ chart_generator.py     # Chart creation
+â”‚   â””â”€â”€ label_calculator.py    # Label generation
+â”‚
+â”œâ”€â”€ scripts/                   # Helper scripts
+â”‚   â”œâ”€â”€ check_balance.ps1      # Dataset balance checker
+â”‚   â””â”€â”€ view_images.py         # Visualize samples
+â”‚
+â”œâ”€â”€ docs/                      # Documentation
+â”‚   â”œâ”€â”€ QUICKSTART.md          # Setup guide
+â”‚   â””â”€â”€ DATA_ANALYSIS_RESULTS.md  # Analysis results
+â”‚
+â”œâ”€â”€ config.py                  # Configuration
+â”œâ”€â”€ requirements.txt           # Dependencies
+â”œâ”€â”€ .gitignore                 # Ignore large files
+â””â”€â”€ README.md                  # This file
 ```
 
 ---
 
-## ⚙️ Configuration
+## âš™ï¸ Configuration
 
 Edit `config.py` to customize:
 
@@ -185,7 +185,7 @@ Edit `config.py` to customize:
 # Data Processing
 WINDOW_SIZE = 30            # Candles per image
 FUTURE_BARS = 5             # Prediction horizon
-PRICE_THRESHOLD = 0.15      # ±0.15% for Buy/Sell
+PRICE_THRESHOLD = 0.15      # Â±0.15% for Buy/Sell
 
 # Image Settings
 IMAGE_SIZE = (224, 224)     # CNN input size
@@ -199,21 +199,21 @@ LEARNING_RATE = 0.001
 
 ---
 
-## 🧠 CNN Architecture
+## ðŸ§  CNN Architecture
 
 ### Custom Architecture
 
 ```
 Input (224x224x3)
-    ↓
-Conv2D(32) → ReLU → MaxPool
-    ↓
-Conv2D(64) → ReLU → MaxPool
-    ↓
-Conv2D(128) → ReLU → MaxPool
-    ↓
-Flatten → Dense(256) → Dropout(0.5)
-    ↓
+    â†“
+Conv2D(32) â†’ ReLU â†’ MaxPool
+    â†“
+Conv2D(64) â†’ ReLU â†’ MaxPool
+    â†“
+Conv2D(128) â†’ ReLU â†’ MaxPool
+    â†“
+Flatten â†’ Dense(256) â†’ Dropout(0.5)
+    â†“
 Output (3 classes: Buy/Sell/Hold)
 ```
 
@@ -225,7 +225,7 @@ Output (3 classes: Buy/Sell/Hold)
 
 ---
 
-## 📈 Methodology
+## ðŸ“ˆ Methodology
 
 ### Data Preparation
 1. Load Binance OHLCV data from Kaggle (Parquet format)
@@ -255,7 +255,7 @@ else:
 
 ---
 
-## 🎯 Expected Performance
+## ðŸŽ¯ Expected Performance
 
 | Metric | Target |
 |--------|--------|
@@ -267,7 +267,7 @@ else:
 
 ---
 
-## 🛠️ Tools & Technologies
+## ðŸ› ï¸ Tools & Technologies
 
 - **Python 3.9**
 - **TensorFlow / PyTorch** (Deep Learning)
@@ -279,7 +279,7 @@ else:
 
 ---
 
-## 📚 Documentation
+## ðŸ“š Documentation
 
 - [Quick Start Guide](docs/QUICKSTART.md)
 - [Data Analysis Results](docs/DATA_ANALYSIS_RESULTS.md)
@@ -287,7 +287,7 @@ else:
 
 ---
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 Contributions are welcome! Please:
 
@@ -299,24 +299,24 @@ Contributions are welcome! Please:
 
 ---
 
-## 📝 License
+## ðŸ“ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ⚠️ Disclaimer
+## âš ï¸ Disclaimer
 
 **This is for educational purposes only.**
 
-- ❌ Not financial advice
-- ⚠️ Trading cryptocurrencies carries significant risk
-- 📉 Past performance ≠ future results
-- 📚 Always do your own research (DYOR)
+- âŒ Not financial advice
+- âš ï¸ Trading cryptocurrencies carries significant risk
+- ðŸ“‰ Past performance â‰  future results
+- ðŸ“š Always do your own research (DYOR)
 
 ---
 
-## 👤 Author
+## ðŸ‘¤ Author
 
 **Saber Barhoumi**
 
@@ -325,7 +325,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+## ðŸ™ Acknowledgments
 
 - [Binance](https://www.binance.com/) for historical data
 - [Kaggle](https://www.kaggle.com/) for hosting the dataset
@@ -335,16 +335,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Support
+## ðŸ“ž Support
 
-⭐ **Star this repository** if you found it helpful!
+â­ **Star this repository** if you found it helpful!
 
-📝 [Report Issues](https://github.com/saber-barhoumi/CryptoVisionAI/issues)
+ðŸ“ [Report Issues](https://github.com/saber-barhoumi/CryptoVisionAI/issues)
 
-💬 [Start Discussion](https://github.com/saber-barhoumi/CryptoVisionAI/discussions)
+ðŸ’¬ [Start Discussion](https://github.com/saber-barhoumi/CryptoVisionAI/discussions)
 
 ---
 
-**Built with ❤️ for the crypto trading community**
+**Built with â¤ï¸ for the crypto trading community**
 
-<!-- Last updated: 2025-10-25 16:03:04 -->
+<!-- Last updated: 2025-10-25 16:46:55 -->
