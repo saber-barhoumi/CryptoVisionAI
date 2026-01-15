@@ -347,4 +347,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with â¤ï¸ for the crypto trading community**
 
-<!-- Last updated: 2026-01-14 18:18:51 -->
+<!-- Last updated: 2026-01-15 09:36:33 -->
